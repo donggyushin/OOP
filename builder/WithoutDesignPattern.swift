@@ -56,7 +56,7 @@ class Person {
 
 //This is function in Xcode-Playground which executes our test code
 func main() {
-  let hitendra = Person(name: "donggyu",
+  let donggyu = Person(name: "donggyu",
                         gender: "Male",
                         birthDate: "13nd Oct 1994",
                         birthPlace: "Jeon-Ju, South Korea",
@@ -72,12 +72,12 @@ func main() {
                         annualIncome: "")
   
   //use of Person object
-  print("\(hitendra.name) works in \(hitendra.companyName) compay as a \(hitendra.designation).")
+  print("\(donggyu.name) works in \(donggyu.companyName) compay as a \(donggyu.designation).")
 }
 
 //call main to execute our test code in Xcode-Playground
 main()
 
 /* Console output:
-Hitendra Solanki works in Fortune 500 compay as a Software architect.
+donggyu works in Fortune 500 compay as a Software architect.
 */
