@@ -22,89 +22,10 @@ builder design pattern은 객체를 조금더 간단하고, 읽기 쉬운 방식
 ### Problem
 10개가 넘는 속성들을 가지고 있는 Person 이라는 class가 있다고 생각해보자. 해당 클래스의 객체를 생성할때에 10개 이상의 인자들을 전달해주어야 하고, 속성들을 관리하는 함수를 관리하는 것도 까다로워질 것이다. 결국에는 가독성이 떨어지는 코드만이 남을 뿐이다. <br /><br />
 
-WithoutDesignPatternExample1.swift
-```
-class Person {
-  //personal details
-  var name: String = ""
-  var gender: String = ""
-  var birthDate: String = ""
-  var birthPlace: String = ""
-  var height: String = ""
-  var weight: String = ""
-  
-  //contact details
-  var phone: String = ""
-  var email: String = ""
-  
-  //address details
-  var streeAddress: String = ""
-  var zipCode: String = ""
-  var city: String = ""
-  
-  //work details
-  var companyName: String = ""
-  var designation: String = ""
-  var annualIncome: String = ""
-  
-  //constructor
-  init(name: String,
-       gender: String,
-       birthDate: String,
-       birthPlace: String,
-       height: String,
-       weight: String,
-       phone: String,
-       email: String,
-       streeAddress: String,
-       zipCode: String,
-       city: String,
-       companyName: String,
-       designation: String,
-       annualIncome: String) {
-    self.name = name
-    self.gender = gender
-    self.birthDate = birthDate
-    self.birthPlace = birthPlace
-    self.height = height
-    self.weight = weight
-    self.phone = phone
-    self.email = email
-    self.streeAddress = streeAddress
-    self.zipCode = zipCode
-    self.height = height
-    self.city = city
-    self.companyName = companyName
-    self.designation = designation
-    self.annualIncome = annualIncome
-  }
-}
+https://github.com/donggyushin/OOP/blob/4bc7668ba476a3cac0ae7c7a68f2ee4e4e19d8d4/builder/WithoutDesignPattern.swift#L1-L83
 
-//This is function in Xcode-Playground which executes our test code
-func main() {
-  let hitendra = Person(name: "Hitendra Solanki",
-                        gender: "Male",
-                        birthDate: "2nd Oct 1991",
-                        birthPlace: "Gujarat, India",
-                        height: "5.9 ft",
-                        weight: "85kg",
-                        phone: "+91 90333-71772",
-                        email: "hitendra.developer@gmail.com",
-                        streeAddress: "52nd Godrej Street",
-                        zipCode: "380015",
-                        city: "Ahmedabad",
-                        companyName: "Fortune 500",
-                        designation: "Software architect",
-                        annualIncome: "45,000 USD")
-  
-  //use of Person object
-  print("\(hitendra.name) works in \(hitendra.companyName) compay as a \(hitendra.designation).")
-}
-
-//call main to execute our test code in Xcode-Playground
-main()
-```
 <br />
+
 위의 코드를 playground에 붙이고 실행시켜보면 로직적으로는 문제가 전혀 없기 때문에 해당 코드는 잘 돌아갈 것이다. <br />
 
 우리는 위의 코드를 다음 몇 가지 사항들을 고려하여 개선시켜볼 수 있다. 
@@ -129,4 +50,8 @@ Eg. Person class의 인자를 생성해야 하는데, 해당 사람이 아직 jo
 3. 주소
 4. 회사
 
+<br />
 
+디자인 패턴을 함께 사용하면 위에서 언급하였던 두 문제점들을 해결할 수 있습니다.
+
+https://github.com/donggyushin/OOP/blob/4bc7668ba476a3cac0ae7c7a68f2ee4e4e19d8d4/builder/Example1.swift#L1-L166
