@@ -56,20 +56,20 @@ class Person {
 
 //This is function in Xcode-Playground which executes our test code
 func main() {
-  let hitendra = Person(name: "Hitendra Solanki",
+  let hitendra = Person(name: "donggyu",
                         gender: "Male",
-                        birthDate: "2nd Oct 1991",
-                        birthPlace: "Gujarat, India",
-                        height: "5.9 ft",
-                        weight: "85kg",
-                        phone: "+91 90333-71772",
-                        email: "hitendra.developer@gmail.com",
-                        streeAddress: "52nd Godrej Street",
-                        zipCode: "380015",
-                        city: "Ahmedabad",
-                        companyName: "Fortune 500",
-                        designation: "Software architect",
-                        annualIncome: "45,000 USD")
+                        birthDate: "13nd Oct 1994",
+                        birthPlace: "Jeon-Ju, South Korea",
+                        height: "",
+                        weight: "62kg",
+                        phone: "+8210 9041-1019",
+                        email: "donggyu9410@gmail.com",
+                        streeAddress: "노원구 동일로190길 65",
+                        zipCode: "01842",
+                        city: "Seoul",
+                        companyName: "Happymoonday",
+                        designation: "Software engineer",
+                        annualIncome: "")
   
   //use of Person object
   print("\(hitendra.name) works in \(hitendra.companyName) compay as a \(hitendra.designation).")
