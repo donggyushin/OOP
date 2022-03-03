@@ -78,6 +78,3 @@ https://github.com/donggyushin/OOP/blob/4bc7668ba476a3cac0ae7c7a68f2ee4e4e19d8d4
 2. `Single responsibility principle` 을 따른다 ([SOLID 원칙](https://ko.wikipedia.org/wiki/SOLID_(%EA%B0%9D%EC%B2%B4_%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84)))
 3. 객체의 생성과 업데이트시 속성에 대한 접근을 어느 순서대로든 가능하다. 
 
-
-### Bonus
-
