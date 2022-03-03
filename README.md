@@ -56,20 +56,22 @@ Eg. Person class의 인자를 생성해야 하는데, 해당 사람이 아직 jo
 
 https://github.com/donggyushin/OOP/blob/4bc7668ba476a3cac0ae7c7a68f2ee4e4e19d8d4/builder/Example1.swift#L1-L166
 
-<br />
+<br /><br />
 
 위의 예시 코드에서, 우리는 Person 이라는 class를 관심사에 따라 여러 다른 클래스들로 분리시키는데 성공하였습니다. Person 클래스는 이제 오직 data만 담고 있고 속상값들 수정하는데에는 관심사에 의해서 분리가 되어진 여러 builder 클래스들을 통해서 이루어집니다. 
 
-<br />
+<br /><br />
 우선은 PersonBuilder라는 하나의 base builder class를 담고있고, 관심사에 따라서 PersonPersonalDetailsBuilder, PersonContactDetailsBuilder, PersonAddressDetailsBuilder, PersonCompanyDetailsBuilder 클래스로 나뉘어집니다. 
 
-<br />
+<br /><br />
 우리의 base class 인 PersonBuilder 클래스는 여러 다른 builder 로 모드를 변경하는 것을 도와주어서 우리는 각 관심사에 따라서 원할때마다 클래스의 속성값들을 가독성있는 코드로써 업데이트 해줄 수 있습니다. 
 
-<br />
+<br /><br />
 첫번째 예시와 비교해서 두번째 코드에서 Person 객체의 constructor가 훨씬 명확해지고 우리가 원하는 시점에 언제든지 데이터를 쉽게 업데이트 할 수 있게 되었습니다. 
-<br />
+<br /><br />
 또한 우리는 각각의 builder가 본인 스스로를 계속 반환하고 있는 것을 알 수 있는데, 이로써 우리는 같은 builder의 메소드들을 끊킴없이 한 줄로 깔끔하게 호출할 수 있게 되었습니다. 이러한 방식은 `Fluent patterns` 이라고 불려집니다. 
+
+<br />
 
 ### 이점
 1. 객체의 생성을 간편하게 할 수 있고 가독성이 좋은 방식으로 작업할 수 있다. 
