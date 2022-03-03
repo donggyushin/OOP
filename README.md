@@ -22,7 +22,7 @@ builder design pattern은 객체를 조금더 간단하고, 읽기 쉬운 방식
 ### Problem
 10개가 넘는 속성들을 가지고 있는 Person 이라는 class가 있다고 생각해보자. 해당 클래스의 객체를 생성할때에 10개 이상의 인자들을 전달해주어야 하고, 속성들을 관리하는 함수를 관리하는 것도 까다로워질 것이다. 결국에는 가독성이 떨어지는 코드만이 남을 뿐이다. <br /><br />
 
-https://github.com/donggyushin/OOP/blob/4bc7668ba476a3cac0ae7c7a68f2ee4e4e19d8d4/builder/WithoutDesignPattern.swift#L1-L83
+https://github.com/donggyushin/OOP/blob/a6d7cec48adcca941d120ff6be83df0ae8aeb923/builder/WithoutDesignPattern.swift#L1-L83
 
 <br />
 
