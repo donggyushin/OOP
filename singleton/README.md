@@ -30,3 +30,22 @@ Singleton 디자인 패턴에는 크게 두 가지 종류가 존재합니다.
 <br />
 
 Pure-singleton 디자인패턴에 대해서 코드로 접근해봅시다. 
+<br />
+https://github.com/donggyushin/OOP/blob/b6669f66a7a3e315a5cf4cf42b43ee0cf0ca4581/singleton/pureSingleton.swift#L1-L24
+
+<br />
+위의 예제 코드에서 우리는 LogManager 클래스의 모든 생성자 메서드를 private으로 선언했기 때문에, 해당 클래스의 외부에서는 해당 클래스의 인스턴스를 생성할 수가 없게 됩니다. 만일 외부에서 해당 클래스의 객체를 생성하려고 할 시에 컴파일러가 error 를 던져줄겁니다. 
+<br />
+
+UIApplication, AppDelegate 이 대표적인 pure-singleton class의 예시입니다. 혹시 UIApplication 클래스 객체를 생성해보려고 했다면 앱이 크래쉬나는것을 경험해보셨을 겁니다. <br /><br />
+
+### Pure singleton 디자인 패턴의 한계
+우리는 pure-singleton 클래스를 테스트 데이터를 이용해서 테스해볼 수 없습니다. 위의 예제에서 LogManager 에게 실제 프로덕션 레벨의 url 이 아닌 어떤 테스트 모드의 url 을 던져줘서 테스트 해보려고 한다고 생각해보세요. 방법이 없습니다. <br />
+
+우리는 이 한계점을 pure-singleton 디자인 패턴 대신에 semi-singleton 디자인 패턴을 사용하거나 의존성 주입 패턴을 사용함으로써 극복할 수 있습니다. 추후에 의존성 주입에 대한 포스팅도 진행하도록 하겠습니다만 우선 지금은 semi-singleton 디자인 패턴에 대해서 알아봅시다. <br /><br />
+
+### Semi-singleton design pattern
+Semi-singleton 디자인 패턴은 개발자가 필요하다면 스스로 인스턴스를 생성할 수 있습니다. 그리고 개발자가 final 키워드로 semi-singleton 클래스를 선언하지 않는다면 상속도 얼마든지 가능합니다. semi-design 패턴에서 final 키워드는 필요조건은 아닙니다. <br /><br />
+
+
+
