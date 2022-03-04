@@ -47,5 +47,19 @@ UIApplication, AppDelegate 이 대표적인 pure-singleton class의 예시입니
 ### Semi-singleton design pattern
 Semi-singleton 디자인 패턴은 개발자가 필요하다면 스스로 인스턴스를 생성할 수 있습니다. 그리고 개발자가 final 키워드로 semi-singleton 클래스를 선언하지 않는다면 상속도 얼마든지 가능합니다. semi-design 패턴에서 final 키워드는 필요조건은 아닙니다. <br /><br />
 
+https://github.com/donggyushin/OOP/blob/0fa34f71dba17f863f5cc725e938eebc825648c4/singleton/semiSingleton.swift#L1-L37
+
+위의 코드에서는 클래스의 생성자를 private 으로 선언하지 않았습니다. 그래서 우리는 해당 클래스의 객체를 언제든지 새롭게 생성해서 databaseURLEndpoint에 대한 의존성을 없앨 수 있습니다. 그래서 테스트 코드도 쉽게 작성할 수 있게 되죠. <br /><br />
+
+UserDefault, FileManager, NotificationCenter 가 대표적인 semi-singleton 클래스의 예시입니다. 개발자들은 미리 정의된 shared 인스턴스를 UserDefault.standard, FileManager.default, NotificationCenter.default 등을 통해 사용가능하고, 원한다면 객체를 새로 생성해서 이용해도 됩니다. 
+
+pure 혹은 semi singleton 클래스의 미리 정의된 객체들은 앱이 종료될때까지 메모리에 올라가서 사라지지 않을 겁니다. 개발자가 명시적으로 생성한 semi singleton 클래스의 객체는 본인의 수명이 다하면 언제든지 메모리에서 개발자가 내릴 수 있기 때문에 코드를 최적화할 수 있다는 장점이 있습니다. 
+
+> Question: 그럼 어떤 디자인 패턴이 더 좋나요? 언제 pure를 쓰고 언제 semi를 사용해야 하나요?
+
+
+이 질문에 대한 대답은 class의 역할에 따라 결졍됩니다. 만약에 어떤 포인트에서 속성이나 메서드들이 추가/변경 되거나, mock 데이터를 이용해서 테스트 케이스를 붙여야할 케이스가 필요하다면 semi-singleton 디자인 패턴을 사용해야겠죠. 
+<br /><br />
+만약에 클래스에 대한 유닛테스트를 마치고 이것을 프레임워크나 라이브러리로 출시하고 싶다면 pure-singleton 디자인 패턴을 사용해도 좋습니다. 왜냐하면 당신이 짠 클래스의 테스트코드같은 경우에는 해당 코드가 배포되어지기 전인 당신의 몫이지, 해당 코드를 물려받아서 사용하는 개발자의 몫은 아니기 때문이죠. 
 
 
